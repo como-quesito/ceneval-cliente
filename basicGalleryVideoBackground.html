@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Galería</title>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<style>
+		html,body{
+			background-color: black;
+		}
+		video{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+
+			z-index: -1;
+		}
+
+		h1{
+			font-family: 'Lobster', cursive;
+			text-align: center;
+			font-size: 70px;
+			color: #fff;
+		}
+		
+		#imagenes{
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		.boton{
+			width: 150px;
+			height: 150px;
+			border-radius:85px;
+			border: 5px solid #FFF;
+			margin: 10px;
+			opacity: 0.5;
+
+			cursor: pointer;
+
+			transform: rotate(-45deg);
+			transition:.4s; 
+		}
+
+		.boton:hover{
+			border: 5px solid #f00;
+			opacity: 1;
+			transform: rotate(90deg);
+		}
+
+		#imagenPrincipal{
+			width: 40%;
+			margin-left: 30%;
+			border: 8px solid #f00;
+		}
+
+	</style>
+	<script>
+	function cambiarImagen(etiquetaImagen){
+		document.getElementById("imagenPrincipal").src = etiquetaImagen.src;
+	}
+	</script>
+</head>
+<body>
+	
+
+
+	<video loop autoplay>
+		<source src="video/video.mp4">
+	</video>
+
+	<h1>Este es mi Sitio web!</h1>
+	
+	<img id="imagenPrincipal" src="imagenes/huatulco1.jpg">
+
+	<div id="imagenes">
+		<img class="boton" src="imagenes/huatulco1.jpg" onclick="cambiarImagen(this)">
+		<img class="boton" src="imagenes/huatulco2.jpg" onclick="cambiarImagen(this)">
+		<img class="boton" src="imagenes/huatulco3.jpg" onclick="cambiarImagen(this)">
+		<img class="boton" src="imagenes/huatulco4.jpg" onclick="cambiarImagen(this)">
+		<img class="boton" src="imagenes/huatulco5.jpg" onclick="cambiarImagen(this)">
+		<img class="boton" src="imagenes/huatulco6.jpg" onclick="cambiarImagen(this)">
+	</div>
+
+</body>
+</html>

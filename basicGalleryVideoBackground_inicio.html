@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Galería</title>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<style>
+		video{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+
+			z-index: -1;
+		}
+
+		h1{
+			font-family: 'Lobster', cursive;
+			text-align: center;
+			font-size: 70px;
+			color: #fff;
+		}
+		
+		#imagenes{
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		.botones{
+			width: 150px;
+			height: 150px;
+			border-radius:85px;
+			border: 5px solid #FFF;
+			margin: 10px;
+			opacity: 0.5;
+
+			
+
+			transform: rotate(-45deg);
+			transition:.4s; 
+		}
+
+		.botones:hover{
+			border: 5px solid #f00;
+			opacity: 1;
+			transform: rotate(0deg);
+		}
+
+		
+
+	</style>
+	
+</head>
+<body>
+	
+</body>
+
+	<video loop autoplay>
+		<source src="video/video.mp4">
+	</video>
+
+	<h1>Este es mi Sitio web!</h1>
+	
+	
+
+	<div id="imagenes">
+		<img class="botones" src="imagenes/big_sur.jpg">
+		<img class="botones" src="imagenes/bridge.jpg">
+		<img class="botones" src="imagenes/flag.jpg">
+		<img class="botones" src="imagenes/oranges.jpg">
+		<img class="botones" src="imagenes/looking.jpg">
+		<img class="botones" src="imagenes/backpack_main.jpg">
+	</div>
+
+
+</html>
