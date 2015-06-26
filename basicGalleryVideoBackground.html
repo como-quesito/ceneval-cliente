@@ -48,18 +48,35 @@
 			border: 5px solid #f00;
 			opacity: 1;
 			transform: rotate(90deg);
+			transform:scale(1.2);
 		}
 
 		#imagenPrincipal{
 			width: 40%;
 			margin-left: 30%;
 			border: 8px solid #f00;
+			transition: all .2s ease-in-out;
+		}
+		#imagenPrincipal:hover{
+
+			transform:scale(1.2);
+		}
+		#mensaje{
+			color:white;
+			text-align: center;
 		}
 
 	</style>
 	<script>
 	function cambiarImagen(etiquetaImagen){
 		document.getElementById("imagenPrincipal").src = etiquetaImagen.src;
+		if(etiquetaImagen.name=="dos") {
+			document.getElementById("mensaje").innerHTML = "Mi adorada playa!!";
+			document.getElementById("jeje").remove();
+		}
+		if(etiquetaImagen.name=="uno"){
+			document.getElementById("mensaje").innerHTML = "Mi  playa predilecta";
+		}
 	}
 	</script>
 </head>
@@ -74,10 +91,10 @@
 	<h1>Este es mi Sitio web!</h1>
 	
 	<img id="imagenPrincipal" src="imagenes/huatulco1.jpg">
-
+<div id="mensaje">mmmm</div>
 	<div id="imagenes">
-		<img class="boton" src="imagenes/huatulco1.jpg" onclick="cambiarImagen(this)">
-		<img class="boton" src="imagenes/huatulco2.jpg" onclick="cambiarImagen(this)">
+		<img class="boton" name="uno" src="imagenes/huatulco1.jpg" onclick="cambiarImagen(this)">
+		<img class="boton" id="jeje" name="dos" src="imagenes/huatulco2.jpg" onclick="cambiarImagen(this)">
 		<img class="boton" src="imagenes/huatulco3.jpg" onclick="cambiarImagen(this)">
 		<img class="boton" src="imagenes/huatulco4.jpg" onclick="cambiarImagen(this)">
 		<img class="boton" src="imagenes/huatulco5.jpg" onclick="cambiarImagen(this)">
