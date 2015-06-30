@@ -6,6 +6,17 @@
     font-family: 'roboto-light';
     src:url('Roboto-Light.ttf')
 }
+@font-face {
+
+    font-family:'roboto-light-italic';
+    src:url('Roboto-LightItalic.ttf')
+}
+
+@font-face {
+    font-family: 'roboto-italic';
+    src:url('Roboto-Italic.ttf');
+}
+
 
 #fondo {
     position:absolute;
@@ -41,4 +52,46 @@
 #contenido p{
     font-family: roboto-light;
     font-size: 18px;
+}
+
+.off-canvas-wrap, .inner-wrap {
+    min-height: 100%;
+}
+
+.off-canvas-wrap{
+    height: 100%;
+    overflow-y: auto;
+}
+.off-canvas-list .temas{
+    color:white;
+
+}
+.titulo{
+    font-family: roboto-light;
+    font-size: large;
+}
+.subtemas{
+    font-family: roboto-italic;
+    font-size: 14px;
+}
+.glyph {
+    border-bottom: 1px dotted #ccc;
+    padding: 10px 0 20px;
+    margin-bottom: 20px;
+}
+.tab-bar-section{
+    background-color:#008cba;
+    border-color: #008cba;
+}
+.menu-icon{
+    background-color:#008cba ;
+    border-color:#008cba;
+}
+.right-off-canvas-toggle{
+    border-color:#008cba;
+    background-color:#008cba;
+}
+.right-small{
+    border-color:#008cba;
+    background-color:#008cba;
 }

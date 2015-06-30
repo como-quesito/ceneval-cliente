@@ -3,21 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Guia ceneval | inicio</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
     <link rel="stylesheet" href="css/estilos.css"/>
-
-    <title></title>
+    <link rel="stylesheet" href="css/foundation-icons.css"/>
+    <link href="css/foundation-icons.ttf">
 </head>
 <body>
+<!--
 
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="#">Guía de estudio</a></h1>
+        </li>
+
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+
+        <ul class="right">
+            <li class="active"><a href="#">Sistemas Computacionales</a></li>
+            <li class="has-dropdown">
+                <a href="#">Guías oficiales</a>
+                <ul class="dropdown">
+                    <li><a href="#">Guía Ingeniería</a></li>
+                    <li><a href="#">Guía LATI</a></li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <ul class="left">
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+    </section>
+</nav>
+-->
+<!-- Inicia menu off- canvas-->
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <nav class="tab-bar">
+            <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+            </section>
+
+            <section class="middle tab-bar-section">
+                <h1 class="title titulo">Ingeniería de Software</h1>
+            </section>
+
+            <section class="right-small">
+                <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+            </section>
+        </nav>
+
+        <aside class="left-off-canvas-menu">
+            <ul class="off-canvas-list">
+                <li><label class="temas">A. Análisis de sistemas de información</label></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>1. Diagnóstico del problema y valoración de la factibilidad para el desarrollo de sistemas de información</a></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i> 2. Modelado de los requerimientos de un sistema de información</a></li>
+                <li><label class="temas">B. Desarrollo e implantación de aplicaciones computacionales</label></li>
+                <li><a href="#"class="subtemas"><i class="fi-pencil"> </i> Diseño de la solución del problema de tecnología deinformación</a></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>1. Diseño de la solución del problema de tecnología deinformación</a></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>2. Desarrollo de sistemas</a></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>3. Implantación de sistemas</a></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>4. Aplicación de modelos matemáticos</a></li>
+                <li><label class="temas">C. Gestión de proyectos de tecnologías de información</label></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>Administración de proyectos de tecnologías deinformación</a> </li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>Control de calidad de proyectos de tecnologías de la información</a> </li>
+                <li><label class="temas">D. Implementación de redes, bases de datos, sistemas operativos y lenguaje de desarrollo </label></li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>Gestión de redes de datos</a> </li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>Gestión de bases de datos</a> </li>
+                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>Gestión de sistemas operativos o lenguajes de desarrollo </a> </li>
+
+            </ul>
+        </aside>
+
+        <aside class="right-off-canvas-menu">
+
+            <ul class="off-canvas-list">
+                <li><label class="temas">Simulador de examen</label></li>
+                <li><a href="#">Sistemas Computacionales</a></li>
+                <li><a href="#">Licenciatura en Informática</a></li>
+            </ul>
+        </aside>
+
+
+
+
+        <section id="firstStop" class="main-section">
+            <!-- content goes here -->
+            <div class="joyride-tip-guide">
+                <span class="joyride-nub top"></span>
+                <div class="joyride-content-wrapper">
+                    <p>Hola!, Bienvenido al emulador, selecciona una subárea del ícono de menú</p>
+                    <a href="#" class="small button joyride-next-tip">Siguiente</a>
+                    <a href="#close" class="joyride-close-tip">&times;</a>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <a class="exit-off-canvas"></a>
+
+<div id="secondStop" style="position: absolute;top:0;right:360px">
+    <!-- content goes here -->
+</div>
+        <div class="joyride-tip-guide">
+            <span class="joyride-nub top"></span>
+            <div class="joyride-content-wrapper">
+                <p>Selecciona el tipo de examen que deseas emular de este icono de menú</p>
+                <a href="#" class="small button joyride-next-tip">Siguiente</a>
+                <a href="#close" class="joyride-close-tip">&times;</a>
+            </div>
+        </div>
+
+</div>
+
+    </div>
+</div>
+
+<!-- At the bottom of your page but inside of the body tag -->
+<ol class="joyride-list" data-joyride>
+    <li data-id="firstStop" data-text="Next" data-options="tip_location: top; prev_button: false">
+        <p>Hello and welcome to the Joyride <br>documentation page.</p>
+    </li>
+    <li data-id="secondStop" data-class="custom so-awesome" data-options="tip_location:bottom; nub_position:right" data-text="Fin" data-prev-text="Prev">
+        <h4>Dudas</h4>
+        <p>Cualquier duda o comentario contactar al director de carrera Jose Angel Nuñes, gracias!</p>
+    </li>
+    <li data-id="numero2" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+        <h4>Stop #2</h4>
+        <p>Get the details right by styling Joyride with a custom stylesheet!</p>
+    </li>
+    <li data-button="End" data-prev-text="Prev">
+        <h4>Stop #3</h4>
+        <p>It works as a modal too!</p>
+    </li>
+</ol>
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
+<script src="js/foundation/foundation.joyride.js"></script>
+<script src="js/foundation/foundation.offcanvas.js"></script>
 <script src="js/foundation/foundation.joyride.js"></script>
 <script src="js/vendor/jquery.cookie.js"></script> <!-- Optional -->
 <script>
     $(document).foundation();
+    $(document).foundation('joyride', 'start');
 </script>
 </body>
 </html>

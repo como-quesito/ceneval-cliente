@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roxette</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/foundation-icons.css"/>
+    <link href="css/foundation-icons.ttf">
+</head>
+
+<body>
+<!-- Here is the markup our JS creates for you -->
+<div class="joyride-tip-guide">
+    <span class="joyride-nub top"></span>
+    <div class="joyride-content-wrapper">
+        <p>Hola malos and welcome to the Joyride documentation page.</p>
+        <a href="#" class="small button joyride-next-tip">Next</a>
+        <a href="#close" class="joyride-close-tip">&times;</a>
+    </div>
+</div>
+<div id="firstStop" class="panel">Some awesome part of your site!</div>
+<!-- At the bottom of your page but inside of the body tag -->
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.joyride.js"></script>
+<script src="js/vendor/jquery.cookie.js"></script> <!-- Optional -->
+<script src="js/foundation/foundation.offcanvas.js"></script>
+
+
+<ol class="joyride-list" data-joyride>
+    <li data-id="firstStop" data-text="Next" data-options="tip_location:top; prev_button: false">
+        <p>Hello and welcome to the Joyride <br>documentation page.</p>
+    </li>
+    <li data-id="numero1" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev">
+        <h4>Stop #1</h4>
+        <p>You can control all the details for you tour stop. Any valid HTML will work inside of Joyride.</p>
+    </li>
+    <li data-id="numero2" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+        <h4>Stop #2</h4>
+        <p>Get the details right by styling Joyride with a custom stylesheet!</p>
+    </li>
+    <li data-button="End" data-prev-text="Prev">
+        <h4>Stop #3</h4>
+        <p>It works as a modal too!</p>
+    </li>
+</ol>
+
+<script>
+    $(document).foundation('joyride', 'start');
+</script>
+</body>
+</html>
