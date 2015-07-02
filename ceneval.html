@@ -1,47 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="miAplicacion">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guia ceneval | inicio</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/principal.js"></script>
     <link rel="stylesheet" href="css/estilos.css"/>
     <link rel="stylesheet" href="css/foundation-icons.css"/>
     <link href="css/foundation-icons.ttf">
 </head>
-<body>
-<!--
+<body ng-controller="primerController">
 
-<nav class="top-bar" data-topbar role="navigation">
-    <ul class="title-area">
-        <li class="name">
-            <h1><a href="#">Guía de estudio</a></h1>
-        </li>
-
-        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-
-        <ul class="right">
-            <li class="active"><a href="#">Sistemas Computacionales</a></li>
-            <li class="has-dropdown">
-                <a href="#">Guías oficiales</a>
-                <ul class="dropdown">
-                    <li><a href="#">Guía Ingeniería</a></li>
-                    <li><a href="#">Guía LATI</a></li>
-                </ul>
-            </li>
-        </ul>
-
-
-        <ul class="left">
-            <li><a href="#">Ayuda</a></li>
-        </ul>
-    </section>
-</nav>
--->
 <!-- Inicia menu off- canvas-->
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
@@ -62,14 +34,13 @@
         <aside class="left-off-canvas-menu">
             <ul class="off-canvas-list">
                 <li><label class="temas">A. Análisis de sistemas de información</label></li>
-                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>1. Diagnóstico del problema y valoración de la factibilidad para el desarrollo de sistemas de información</a></li>
-                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i> 2. Modelado de los requerimientos de un sistema de información</a></li>
+                <li><a href="#" class="subtemas" ng-click="cambiarADiagnostico()"><i class="fi-pencil"> </i>1. Diagnóstico del problema y valoración de la factibilidad para el desarrollo de sistemas de información</a></li>
+                <li><a href="#" class="subtemas" ng-click="cambiarAModelado()"><i class="fi-pencil"> </i> 2. Modelado de los requerimientos de un sistema de información</a></li>
                 <li><label class="temas">B. Desarrollo e implantación de aplicaciones computacionales</label></li>
-                <li><a href="#"class="subtemas"><i class="fi-pencil"> </i> Diseño de la solución del problema de tecnología deinformación</a></li>
-                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>1. Diseño de la solución del problema de tecnología deinformación</a></li>
-                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>2. Desarrollo de sistemas</a></li>
-                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>3. Implantación de sistemas</a></li>
-                <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>4. Aplicación de modelos matemáticos</a></li>
+                <li><a href="#" class="subtemas" ng-click="cambiarBDiseno()"><i class="fi-pencil"> </i>1. Diseño de la solución del problema de tecnología de información</a></li>
+                <li><a href="#" class="subtemas" ng-click="cambiarBDesarrollo()"><i class="fi-pencil"> </i>2. Desarrollo de sistemas</a></li>
+                <li><a href="#" class="subtemas" ng-click="cambiarBImplantacion()"><i class="fi-pencil"> </i>3. Implantación de sistemas</a></li>
+                <li><a href="#" class="subtemas" ng-click="cambiarBAplicacion()"><i class="fi-pencil"> </i>4. Aplicación de modelos matemáticos</a></li>
                 <li><label class="temas">C. Gestión de proyectos de tecnologías de información</label></li>
                 <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>Administración de proyectos de tecnologías deinformación</a> </li>
                 <li><a href="#" class="subtemas"><i class="fi-pencil"> </i>Control de calidad de proyectos de tecnologías de la información</a> </li>
@@ -89,11 +60,16 @@
                 <li><a href="#">Licenciatura en Informática</a></li>
             </ul>
         </aside>
+        <!-- AQUI INICIA EL CONTENID0 PRINCIPAL    -->
+        <section class="main-section" id="principal">
+            <ng-include src="mensaje"></ng-include>
+        </section>
 
 
 
 
-        <section id="firstStop" class="main-section">
+        <a class="exit-off-canvas"></a>
+        <section id="firstStop" class="main-section"  style="position: absolute;top:0;left:22px">
             <!-- content goes here -->
             <div class="joyride-tip-guide">
                 <span class="joyride-nub top"></span>
@@ -106,9 +82,6 @@
 
 
         </section>
-
-
-        <a class="exit-off-canvas"></a>
 
 <div id="secondStop" style="position: absolute;top:0;right:360px">
     <!-- content goes here -->
@@ -129,7 +102,7 @@
 
 <!-- At the bottom of your page but inside of the body tag -->
 <ol class="joyride-list" data-joyride>
-    <li data-id="firstStop" data-text="Next" data-options="tip_location: top; prev_button: false">
+    <li data-id="firstStop" data-text="Next" data-options="tip_location: top; prev_button: false; nub_position:left">
         <p>Hello and welcome to the Joyride <br>documentation page.</p>
     </li>
     <li data-id="secondStop" data-class="custom so-awesome" data-options="tip_location:bottom; nub_position:right" data-text="Fin" data-prev-text="Prev">
@@ -154,6 +127,11 @@
 <script>
     $(document).foundation();
     $(document).foundation('joyride', 'start');
+    $(document).foundation({
+        offcanvas: {
+            close_on_click: true
+        }
+    });
 </script>
 </body>
 </html>

@@ -17,7 +17,9 @@
     src:url('Roboto-Italic.ttf');
 }
 
-
+body{
+    overflow: hidden;
+}
 #fondo {
     position:absolute;
     top:0;
