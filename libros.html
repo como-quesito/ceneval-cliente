@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
@@ -15,18 +15,23 @@
         }
     }
 */
-    #stage {
-        margin: 1em auto;
-        -webkit-perspective: 1200px;
+#libros{
+
+    width:600px;
+    margin:0 auto;
+}
+
+    .stage {
+        display:inline;
+          margin: 2em auto;
+        -webkit-perspective: 1700px;
+        perspective: 1700px;
+        -moz-perspective: 1700px;
+
+
     }
 
-    #spinner {
-        -webkit-animation-name: spinner;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-duration: 6s;
-        -webkit-transform-style: preserve-3d;
-    }
+
     /*
     #spinner:hover {
 
@@ -41,38 +46,62 @@
     }
     */
 
-    img{
+    .librito{
         position: absolute;
+        display:inline ;
         border: 1px solid #ccc;
        cursor: pointer;
         box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
         transition:0.6s;
+
+
     }
-    img:hover{
-        transform: rotateY(-10deg);
-        transform-origin: 0% 20%;
+    .librito:hover{
+        -webkit-transform: rotate3D(0,20,0,-20deg);
+        -webkit-transform-origin: 0% 20%;
+
+       -moz-transform: rotateY(-30deg);
+        -moz-transform-origin: 0% 20%;
     }
     .tapa{
-        position: absolute;
+        position:absolute;
         border: 1px solid #ccc;
-
+        display:inline;
         box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
         background: -webkit-linear-gradient(80deg, #e6b500,#aaaaaa); /* For Safari 5.1 to 6.0 */
         background: -o-linear-gradient(80deg,#e6b500,#aaaaaa); /* For Opera 11.1 to 12.0 */
         background: -moz-linear-gradient(80deg,#e6b500,#aaaaaa); /* For Firefox 3.6 to 15 */
         background: linear-gradient(80deg, #e6b500,#aaaaaa); /* Standard syntax */
-        width:200px;
-        height: 230px;
-        left:180px;
+        width:150px;
+        height: 180px;
     }
 </style>
 
-<body>
+<div id="libros">
 
-<div id="stage" style="padding-left: 180px; height: 160px;">
+<div class="stage" style="padding-left:10px; height: 160px;">
     <div class="tapa"></div>
-        <img  src="imagenes/kendalito-ico.png" width="200" height="230" alt="">
+        <img class="librito" src="imagenes/somervilsito-ico.png" width="150" height="180" alt="">
 
 </div>
+
+
+<div class="stage" style="padding-left: 180px; height: 160px;">
+    <div class="tapa"></div>
+    <img class="librito" src="imagenes/kendalito-ico.png" width="150" height="180" alt="">
+
+
+</div>
+
+<div class="stage" style="padding-left: 180px; height: 160px;">
+    <div class="tapa"></div>
+    <img class="librito" src="imagenes/presmansito-ico.png" width="150" height="180" alt="">
+
+
+</div>
+
+</div>
+
+
 </body>
 </html>

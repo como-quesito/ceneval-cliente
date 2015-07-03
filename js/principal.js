@@ -3,11 +3,11 @@
  */
 angular.module("miAplicacion",[])
     .controller("primerController",function($scope){
-        $scope.mensaje="a/adiagnostico.html";
-
+        $scope.mensaje="adiagnostico.html";
+        $scope.libritos="libros.html";
 
         $scope.cambiarADiagnostico=function(){
-            $scope.mensaje="a/adiagnostico.html";
+            $scope.mensaje="adiagnostico.html";
         }
         $scope.cambiarAModelado=function(){
          $scope.mensaje="a/amodelado.html"
@@ -25,6 +25,20 @@ angular.module("miAplicacion",[])
         $scope.cambiarBImplantacion=function(){
             $scope.mensaje="b/bimplantacion.html";
         }
-
+        $scope.cambiarCAdministracion=function(){
+            $scope.mensaje="c/cadministracion.html";
+        }
+        $scope.cambiarCControl=function(){
+            $scope.mensaje="c/ccontrol.html";
+        }
+        $scope.cambiarDGestionBases=function(){
+            $scope.mensaje="d/dgestionbases.html";
+        }
+        $scope.cambiarDGestionRedes=function(){
+            $scope.mensaje="d/dgestionredes.html";
+        }
+        $scope.cambiarDGestionSistemas=function(){
+            $scope.mensaje="d/dgestionsistemas.html"
+        }
     });
 
